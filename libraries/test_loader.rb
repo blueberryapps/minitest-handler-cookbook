@@ -232,7 +232,7 @@ module MinitestHandler
     def cookbook_file_paths(cookbook_name)
       ckbk = run_context.cookbook_collection[cookbook_name]
       files = []
-      ckbk.manifest['files'].each do |file_info|
+      ckbk.manifest['all_files'].each do |file_info|
         files << file_info['path']
       end
       files
